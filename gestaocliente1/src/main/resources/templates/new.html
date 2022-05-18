@@ -1,0 +1,36 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+   <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   <title>Novo Cliente</title>
+</head>
+<body>
+<div class="container mt-4">
+<div class="row">
+<h1>Novo Cliente</h1>
+<form action="/clientes/new" method="post">
+  <div class="mb-3">
+    <label class="form-label">Nome do Cliente</label>
+    <input class="form-control" type="text" name="nome" >
+    <div> </div>
+  <div class="mb-3">
+    <label class="form-label">Endereço</label>
+    <input type="text" class="form-control" name="endereco">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Cidade</label>
+    <input class="form-control" type="text" name="cidade" >
+    <div> </div>
+  <div class="mb-3">
+    <label class="form-label">UF</label>
+    <select class="form-select" th:text="${unidadeFederativa}" name="uf">
+    <option > </option>
+    </select>
+  </div>
+   <button type="submit" class="btn btn-primary">Submeter</button>
+   <a href="hello.h tml"> Voltar </a>
+  </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
